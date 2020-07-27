@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Form from './components/Form';
+import TodoListContainer from './components/TodoList/TodoListContainer';
+
+//const sample = [{id: 1, text: "hello", completed: false}]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form title={'Todo Text'}/>
+      <TodoListContainer/>
     </div>
   );
 }
