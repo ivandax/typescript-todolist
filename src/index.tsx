@@ -9,7 +9,11 @@ import { Provider } from 'react-redux';
 
 import rootReducer from './reducers';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, 
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+  );
+
+export type AppDispatch = typeof store.dispatch;
 
 ReactDOM.render(
   <React.StrictMode>
